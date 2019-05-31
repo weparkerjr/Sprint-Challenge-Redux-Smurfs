@@ -8,6 +8,30 @@ export const POST_SMURF = 'POST_SMURF';
 const url = 'http://localhost:3333/smurfs';
 
 
+export const fetchSmurfs = () => dispatch {
+  dispatch({ type: FETCH_SMURFS });
+  axios
+    .get(url)
+    .then(res => {
+      dispatch({ type: SUCCESS, payload: res.data });
+    })
+    .catch(err => {
+      dispatch({ type: FAILURE, payload: err })
+    })
+}
+
+export const addSmurf = smurf => dispatch => {
+  dispatch ({ type: POST_SMURF });
+  axios
+    .post(url, smurf)
+    .then(res => {
+      dispatch({ type: SUCCESS, payload: res.data });
+    })
+    .catch(err => {
+      dispatch({ type: FAILURE, payload: err });
+    })
+}
+
 
 /* 
   Action Types Go Here!
