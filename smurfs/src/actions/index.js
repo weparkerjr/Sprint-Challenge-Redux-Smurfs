@@ -8,7 +8,7 @@ export const POST_SMURF = 'POST_SMURF';
 const url = 'http://localhost:3333/smurfs';
 
 
-export const fetchSmurfs = () => dispatch {
+export const fetchSmurfs = () => dispatch => {
   dispatch({ type: FETCH_SMURFS });
   axios
     .get(url)

@@ -5,7 +5,7 @@ import {
   POST_SMURF, 
   DELETE_SMURF, 
   PUT_SMURF,
-} from `../actions`;
+} from '../actions';
 
 /*
   Be sure to import in all of the action types from `../actions`
@@ -30,7 +30,7 @@ export const Reducer = (state = initialState, action) => {
       return {
         ...state,
         fetchingSmurfs: false,
-        smurfs: [...action, payload]
+        smurfs: [...action.payload]
       }
 
     case FAILURE:
