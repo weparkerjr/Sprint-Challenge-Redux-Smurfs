@@ -1,3 +1,14 @@
+import axios from 'axios';
+
+export const FETCH_SMURFS = 'FETCH_SMURFS';
+export const SUCCESS = 'SUCCESS';
+export const FAILURE = 'FAILURE';
+export const POST_SMURF = 'POST_SMURF';
+
+const url = 'http://localhost:3333/smurfs';
+
+
+
 /* 
   Action Types Go Here!
   Be sure to export each action type so you can pull it into your reducer
