@@ -16,8 +16,9 @@ class Smurf extends Component {
             <div className='smurf-container'>
             <div className='smurf-card'>
             <h3>{this.props.smurf.name}</h3>
-            <p>{this.props.smurf.age} is years old</p>
-            <p>{this.props.smurf.height}</p>
+            <p>is {this.props.smurf.age} years old and</p>
+            <p>is {this.props.smurf.height}tall</p>
+            <p>___________________________</p>
             {this.state.editing && <Form smurf={this.props.smurf} submit={this.props.editSmurf} />}
             </div>
             </div>
